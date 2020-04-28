@@ -67,6 +67,7 @@ content titletext h1 {
   color: var(--title-color);
   font-size: 50px;
   margin: 0 0 5px;
+  font-weight: normal;
 }
 
 content titletext h1.big {
