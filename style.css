@@ -1,0 +1,108 @@
+body {
+  line-height: 1.5;
+}
+header {
+  position: relative;
+  font-family: 'Abril Fatface', cursive;
+}
+
+header div {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 250px;
+  color: #222;
+}
+
+header img {
+  width: 100%;
+}
+
+header h1, h2 {
+  display: block;
+}
+
+header h1 {
+  margin-top: 0;
+  font-size: 80px;
+}
+
+header h2 {
+  font-size: 40px;
+  margin-bottom: -20px;
+  padding-bottom: 0;
+}
+
+content {
+  display: block;
+  margin: 0 200px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  padding: 0px;
+}
+
+p {
+  margin: 50px 50px 20px;
+ /* background: cyan;*/
+  color: #222;
+  padding-inline-start: 0px;
+}
+
+.small-text {
+  font-size: 15px;
+  margin: 20px 50px 30px;
+}
+
+ul {
+  list-style-type: square;
+  margin: 0 50px;
+}
+
+.small-list {
+  font-size: 15px;
+  margin: 0 50px;
+}
+
+blockquote::before {
+  content: '“';
+  font-size: 150px;
+  position: absolute;
+  top: -50px;
+  left: 0px;
+}
+
+blockquote {
+  position: relative;
+  background: #666;
+  color: white;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 50px;
+  margin: 50px 0;
+  padding: 50px;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 50px 50px 50px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 50px 50px 0;
+}
+
+h5 {
+  font-family: 'Merriweather', serif;
+  margin: 0 50px 20px;
+}
+
+hr {
+  color: 0;
+  height: 5px;
+  border: 0;
+  background: black;
+  margin: 50px 20px;
+}
