@@ -1,67 +1,91 @@
+:root {
+  --nav-height: 100px;
+  --left-width: 40%;
+  --title-color: #222;
+  --text-color: #555;
+  --quote-background: #444;
+}
+
 body {
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5;
+  font-size: 15px;
+  color: var(--text-color);
 }
-header {
-  position: relative;
-  font-family: 'Abril Fatface', cursive;
-}
-
-header div {
-  position: absolute;
-  bottom: 0;
+nav {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 250px;
-  color: #222;
-}
-
-header img {
+  align-items: center;
+  justify-content: center;
+  height: var(--nav-height);
+  background: var(--title-color);
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 1;
 }
 
-header h1, h2 {
-  display: block;
-}
-
-header h1 {
-  margin-top: 0;
-  font-size: 80px;
-}
-
-header h2 {
+nav a {
   font-size: 40px;
-  margin-bottom: -20px;
-  padding-bottom: 0;
+  margin: 0 20px;
+  text-decoration: none;
+  color: white;
 }
 
 content {
+  display: flex;
+  position: relative;
+  margin: 0 0 50px;
+}
+
+content.upper {
+  margin-top: var(--nav-height);*/
+}
+
+leftside {
   display: block;
-  margin: 0 200px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 18px;
-  padding: 0px;
+  flex-basis: var(--left-width);
+}
+
+rightside {
+  display: block;
+  flex-basis: calc(100% - var(--left-width));
+}
+
+header {
+  display: block;
+  height: 600px;
+  background-image: url("http://stayathome-syllabus.greenfox.academy/week01/assets/first-website-header.png");
+  background-position: center;
+  background-size: auto 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+content titletext h1 {
+  font-family: 'Abril Fatface', cursive;
+  color: var(--title-color);
+  font-size: 50px;
+  margin: 0 0 5px;
+}
+
+content titletext h1.big {
+  font-size: 110px;
+  margin: -40px 0 0 0;
+}
+
+content titletext {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
 }
 
 p {
-  margin: 50px 50px 20px;
- /* background: cyan;*/
-  color: #222;
-  padding-inline-start: 0px;
-}
-
-.small-text {
-  font-size: 15px;
   margin: 20px 50px 30px;
 }
 
 ul {
   list-style-type: square;
-  margin: 0 50px;
-}
-
-.small-list {
-  font-size: 15px;
   margin: 0 50px;
 }
 
@@ -75,11 +99,11 @@ blockquote::before {
 
 blockquote {
   position: relative;
-  background: #666;
+  background: var(--quote-background);
   color: white;
   font-family: 'Abril Fatface', cursive;
   font-size: 50px;
-  margin: 50px 0;
+  margin:  0;
   padding: 50px;
 }
 
@@ -95,14 +119,23 @@ h4 {
 }
 
 h5 {
-  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 15px;
   margin: 0 50px 20px;
 }
 
-hr {
-  color: 0;
-  height: 5px;
-  border: 0;
-  background: black;
-  margin: 50px 20px;
+.bigtext {
+  font-size: 20px;
+  margin: 50px 50px 20px;
+}
+
+.biglist {
+  font-size: 20px;
+}
+
+a.anchor {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  top: calc(0px - var(--nav-height));
 }
